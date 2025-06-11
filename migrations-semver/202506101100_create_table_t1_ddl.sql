@@ -1,4 +1,4 @@
-IF OBJECT_ID('dbo.test', 'U') IS NULL
+IF OBJECT_ID('dbo.Project', 'U') IS NULL
 BEGIN
     CREATE TABLE [dbo].[Project] (
         [ProjectId] INT IDENTITY(1,1) PRIMARY KEY,
