@@ -50,3 +50,17 @@ jobs:
         run: |
           echo "Deploying app to test environment..."
           echo "Deploy app to test environment done!"
+
+      # Upload the full rollout output as an artifact
+      - name: Upload rollout output artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: bytebase-metadata
+          path: ${{ runner.temp }}/bytebase-metadata.json
+    
+      # Upload the plan as an artifact
+      - name: Upload plan artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: bytebase-plan
+          path: ${{ runner.temp }}/bytebase-plan.txt
