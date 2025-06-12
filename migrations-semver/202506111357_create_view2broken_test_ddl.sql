@@ -1,8 +1,8 @@
 IF OBJECT_ID('dbo.vw_test2', 'V') IS NOT NULL
     DROP VIEW dbo.vw_test2;
 GO
-
- VIEW dbo.vw_test2 AS
+    
+CREATE VIEW dbo.vw_test2 AS
 SELECT
     ProjectId,
     Name,
